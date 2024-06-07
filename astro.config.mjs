@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://hr-for-impact.github.io',
-  // base: 'mazi-doc',
+  base: 'mazi-doc',
 	integrations: [
 		starlight({
 			title: 'mazi doc',
@@ -16,7 +16,7 @@ export default defineConfig({
 					label: 'Bienvenue',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Bienvenue', link: '/guides/bienvenue/' },
+						{ label: 'Bienvenue', link: '/mazi-doc/guides/bienvenue/' },
 					],
 				},
 				{
