@@ -16,7 +16,7 @@ export default defineConfig({
 					label: 'Bienvenue',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Bienvenue', link: '/mazi-doc/guides/bienvenue/' },
+						{ label: 'Bienvenue', link: '/guides/bienvenue/' },
 					],
 				},
 				{
