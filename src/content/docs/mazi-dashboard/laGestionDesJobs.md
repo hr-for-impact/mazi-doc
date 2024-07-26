@@ -53,3 +53,14 @@ Avant de soumettre le formulaire, les valeurs sont transformées pour correspond
 La fonction *onMutationSuccess* gère le succès de la mutation en créant un environnement de travail pour le job basé sur les réponses aux questions des recruteurs. En cas d'erreur, la fonction *onMutationError* affiche les erreurs pertinentes.
 
 Les options de sélection pour les business units et les domaines sont fournies par les hooks useSelect, qui récupèrent les données nécessaires et les filtrent en fonction des permissions de l'utilisateur.
+
+# L'édition d'un job
+De même que pour la création d'un job, la page utilise le plugin [`slugify`](https://market.strapi.io/plugins/strapi-plugin-slugify).
+
+La fonction principale *JobEdit* initialise plusieurs hooks pour obtenir les informations de l'utilisateur (useGetIdentity), créer de nouvelles entrées (useCreate), et mettre à jour des entrées existantes (useUpdate). Elle récupère également les questions des recruteurs via useList pour les intégrer dans le formulaire.
+
+Le formulaire d'édition est également configuré en deux étapes en utilisant `useStepsForm`:  une première étape qui affiche les données du job et une deuxième étape qui affichent les réponses aux questions pour le scoring. Les données du job à éditer sont récupérées via queryResult.
+
+Une fonction *extractInitialValues* est définie pour extraire les valeurs initiales des blocs de données strapi du job (bloks Contract Type et Job item list). Cette fonction traite les différents blocs et les transforme en un format approprié pour être utilisé comme valeurs initiales dans le formulaire.
+
+Lorsque le formulaire est soumis, les données sont transformées pour correspondre au format attendu par strapi. Si le job possède déjà un environnement de travail, les données sont mises à jour en utilisant useUpdate. Sinon, un nouvel environnement de travail est créé en utilisant useCreate. Les mutations sont gérées de manière asynchrone, avec des notifications de succès et de gestion des erreurs appropriées.
