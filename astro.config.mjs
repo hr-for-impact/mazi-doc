@@ -23,6 +23,10 @@ export default defineConfig({
 					label: 'Ressources',
 					autogenerate: { directory: 'ressources' },
 				},
+				{
+					label: 'mazi-dashboard',
+					autogenerate: { directory: 'mazi-dashboard' },
+				},
 			],
 		}),
 	],
