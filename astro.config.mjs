@@ -27,6 +27,10 @@ export default defineConfig({
 					label: 'mazi-dashboard',
 					autogenerate: { directory: 'mazi-dashboard' },
 				},
+				{
+					label: 'mazi-front',
+					autogenerate: { directory: 'mazi-front' },
+				},
 			],
 		}),
 	],
