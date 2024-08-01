@@ -58,13 +58,11 @@ Le composant retourne une structure `div` imbriquée avec des styles pour créer
 - Le conteneur interne (div) est configuré pour permettre le défilement horizontal et vertical et utilise le contexte DndContext fourni par la librairie dnd kit,  pour gérer le drag-and-drop.
 
 ### SortableContext
-Le composant fourni par la librairie dnd kit gère le tri et la gestion des éléments au sein du kanban. Il permet de générer l'interface interactive du kanban.
+Le composant fourni par la librairie dnd kit fournit un contexte pour les éléments qui peuvent être triés par glisser-déposer, permettant ainsi une réorganisation interactive de ces éléments.
 Il accepte deux propriétés : 
-- `items`: la liste des éléments à trier. Il s'agit ici d'un tableau de candidature.
+- `items`: tableau d'identifiants représentant les éléments triables dans le contexte.
 - `strategy`: la stratégie de tri. La stratégie choisie ici est `verticalListSortingStrategy` qui permet d'organiser les éléments verticalement.
-Le composant est appelé trois fois:
-- dans un premier temps, il trie la liste des job-applies des candidats qui ont liké (tableau `intersted`)
-- ensuite il trie la liste des job-applies des candidats qui ont liké (tableau `applied`)
-- La liste des job-applies des candidats intégrés dans le process de recrutement (tableau `steps`) est transformé pour avoir la liste des candidatures pour chaque étape. Chacune de ces listes est trié par la suite.
 
 
+### KanbanColumn
+Chaque étape de candidature est rendu dans une colonne.
