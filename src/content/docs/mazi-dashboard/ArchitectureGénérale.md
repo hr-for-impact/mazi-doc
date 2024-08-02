@@ -7,7 +7,8 @@ sidebar:
 
 # Structure Générale
 Le dashboard recruteur est réalisé à partir de Refine qui est une bibliothèque de développement front-end basée sur React.
-Voici le lien vers la [documentation officielle de Refine](https://refine.dev/docs/). 
+Voici le lien vers la [documentation officielle](https://refine.dev/docs/) de Refine. 
+
 Le repo `mazi-dashboard`contient le dossier src ainsi que plusieurs fichiers à la racine.
 
 ```plaintext
@@ -56,8 +57,8 @@ Le dossier `src` contient l'ensemble du code source de l'application organisé c
 - **[utility](../utility/)**: contient des fonctions utilitaires et d'autres éléments qui sont utilisés dans l'application.
 
 #### Fichiers à la racine de src/app
-- **icon.ico** : fichier d'icône pour l'application.
-- **layout.tsx** : composant de layout principal de l'application.
-- **not-found.tsx** : page de gestion des erreurs 404.
-- **page.tsx** : page principale ou point d'entrée de l'application.
+- **icon.ico** : Fichier d'icône pour l'application.
+- **layout.tsx** : Composant de layout principal de l'application.
+- **not-found.tsx** : Page de gestion des erreurs 404.
+- **page.tsx** :  Point d'entrée de l'application qui s'assure que l'utilisateur est correctement authentifié et redirigé vers les ressources appropriées.
 
