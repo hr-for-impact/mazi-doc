@@ -66,3 +66,21 @@ Il accepte deux propriétés :
 
 ### KanbanColumn
 Chaque étape de candidature est rendu dans une colonne.
+`kanbanColumn` accepte 5 props: 
+- **id** : l'identifiant unique de la colonne,
+- **title** : le titre de la colonne. Le nom est donné pour les deux premières colonnes ("a liké" et "a postulé"). Les colonnes suivantes prennent le nom des label des job_apply_step.
+- **count** : le nombre d'éléments actuellement dans la colonne
+- **data** (optionnel): données supplémentaires passées au contexte de drag-and-drop, permettant de personnaliser le comportement du glisser-déposer pour la colonne.
+- **children** : les éléments enfant à rendre dans la colonne.
+Le composant utilise useDroppable de dnd-kit pour rendre la colonne réceptive au drag-and-drop. Il crée une zone de dépôt qui interagit avec les éléments qui peuvent être déplacés dans le tableau Kanban.
+Le composant affiche un badge avec le nombre d'éléments (count) et utilise des icônes de tooltip pour fournir des informations supplémentaires aux utilisateurs. On y gère le scroll par colonne.
+
+## KanbanItem
+Le composant `KanbanItem` représente un élément individuel d'une colonne dans un tableau Kanban.
+Il accepte 4 props:
+- **id** : l'identifiant unique de l'élément qui est ici l'id du job-appy,
+**data** : l'objet contenant la candidature ainsi que l'identifiant de l'étape actuelle dans laquelle se trouve la candidature,
+**draggable** (optionnel) : booléen pour indiquer si l'élément peut être déplacé. Par défaut, il est à *true*. Il est à *false* pour tous les éléments de la colonne "a liké".
+- **children** : les éléments enfant à rendre dans la card.
+`KanbanItem` utilise le hook `useDraggable` de dnd-kit pour rendre l'élément déplaçable. 
+Le composant utilise `DragOverlay` pour afficher une version en surbrillance de l'élément lorsqu'il est en cours de déplacement. Cela offre un retour visuel immédiat à l'utilisateur.
