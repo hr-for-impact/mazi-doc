@@ -84,3 +84,19 @@ Il accepte 4 props:
 - **children** : les éléments enfant à rendre dans la card.
 `KanbanItem` utilise le hook `useDraggable` de dnd-kit pour rendre l'élément déplaçable. 
 Le composant utilise `DragOverlay` pour afficher une version en surbrillance de l'élément lorsqu'il est en cours de déplacement. Cela offre un retour visuel immédiat à l'utilisateur.
+
+## JobApplyCardMemo
+Le composant `JobApplyCardMemo` affiche les informations sur une candidature à un job sous forme de carte.
+Ce composant est mémorisé à l'aide de la fonction memo de React, ce qui optimise le rendu en évitant les re-rendus inutiles si les propriétés de la carte ne changent pas.
+Il prend les propriétés suivantes :
+- **id** : L'id du job apply en chaine de caractère.
+- **name** : Le nom du candidat.
+- **date** : La date de candidature.
+- **rqth** : Le statut RQTH déclaré par le candidat.
+Lorsqu'un utilisateur clique sur le nom du candidat, une fenêtre modale s'ouvre pour afficher plus d'informations.
+Le composant utilise `ConfigProvider` d'Ant Design pour appliquer un thème personnalisé.
+
+## JobApplyModal
+Le composant `JobApplyModal` affiche les détails d'une candidature à un job dans une modale.
+Il utilise notamment `react-pdf` pour afficher le CV du candidat.
+La fonction `renderTextField` permet de rendre les champs de texte de manière uniforme. Si une valeur n'est pas spécifiée, elle affiche "Non spécifié".
