@@ -24,13 +24,14 @@ export default defineConfig({
 					autogenerate: { directory: 'ressources' },
 				},
 				{
-					label: 'mazi-dashboard',
-					autogenerate: { directory: 'mazi-dashboard' },
-				},
-				{
 					label: 'mazi-front',
 					autogenerate: { directory: 'mazi-front' },
 				},
+				{
+					label: 'mazi-dashboard',
+					autogenerate: { directory: 'mazi-dashboard' },
+				},
+				
 			],
 		}),
 	],
