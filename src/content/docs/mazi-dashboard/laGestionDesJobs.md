@@ -2,7 +2,7 @@
 title: La gestion des jobs
 description: Description de la gestion des jobs
 sidebar:
-  order: 5
+  order: 6
 ---
 
 L'architecture du dossier pour la gestion des jobs est organisée comme suit :
@@ -64,3 +64,9 @@ Le formulaire d'édition est également configuré en deux étapes en utilisant 
 Une fonction `extractInitialValues` est définie pour extraire les valeurs initiales des blocs de données strapi du job (bloks Contract Type et Job item list). Cette fonction traite les différents blocs et les transforme en un format approprié pour être utilisé comme valeurs initiales dans le formulaire.
 
 Lorsque le formulaire est soumis, les données sont à nouveau transformées pour correspondre au format attendu par strapi. Si le job possède déjà un environnement de travail, les données sont mises à jour en utilisant `useUpdate`. Sinon, un nouvel environnement de travail est créé en utilisant `useCreate`. Les mutations sont gérées de manière asynchrone, avec des notifications de succès et de gestion des erreurs appropriées.
+
+## La localisation des jobs
+En créant ou en éditant un job, le recruteur choisit dans une liste de département (dans le select).
+Cette liste dépend de la business unit selectionnée:
+- Si il y a un plusieurs départements rattachés à la business unit, la liste contient uniquement ces départements.
+- Si aucun département n'est rattaché à la business unit selectionné, la liste contient tous les département de France (dans locations).
