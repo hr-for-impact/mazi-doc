@@ -2,7 +2,7 @@
 title: Le kanban de recrutement
 description: Description du kanban de recrutement
 sidebar:
-  order: 6
+  order: 7
 ---
 
 Le dossier recruitment contient :
