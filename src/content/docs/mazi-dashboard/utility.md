@@ -2,7 +2,7 @@
 title: Dossier utility
 description: Détails du dossier.
 sidebar:
-  order: 6
+  order: 4
 ---
 
 Le dossier `utility` contient : 

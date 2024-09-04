@@ -2,7 +2,7 @@
 title: Dossier providers
 description: Détails du dossier providers .
 sidebar:
-  order: 5
+  order: 3
 ---
 
 Le dossier `providers` contient :
