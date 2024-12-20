@@ -4,10 +4,10 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://hr-for-impact.github.io',
-  base: 'mazi-doc',
+  base: 'maazi-doc',
 	integrations: [
 		starlight({
-			title: 'mazi doc',
+			title: 'maazi doc',
 			social: {
 				github: 'https://github.com/hr-for-impact',
 			},
@@ -24,12 +24,12 @@ export default defineConfig({
 					autogenerate: { directory: 'ressources' },
 				},
 				{
-					label: 'mazi-front',
-					autogenerate: { directory: 'mazi-front' },
+					label: 'maazi-front',
+					autogenerate: { directory: 'maazi-front' },
 				},
 				{
-					label: 'mazi-dashboard',
-					autogenerate: { directory: 'mazi-dashboard' },
+					label: 'maazi-dashboard',
+					autogenerate: { directory: 'maazi-dashboard' },
 				},
 				
 			],

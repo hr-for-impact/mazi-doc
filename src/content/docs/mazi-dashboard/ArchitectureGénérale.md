@@ -9,10 +9,10 @@ sidebar:
 Le dashboard recruteur est réalisé à partir de Refine qui est une bibliothèque de développement front-end basée sur React.
 Voici le lien vers la [documentation officielle](https://refine.dev/docs/) de Refine. 
 
-Le repo `mazi-dashboard`contient le dossier src ainsi que plusieurs fichiers à la racine.
+Le repo `maazi-dashboard`contient le dossier src ainsi que plusieurs fichiers à la racine.
 
 ```plaintext
-mazi-dashboard/
+maazi-dashboard/
 ├── src/
 │   ├── app/
 │   ├── components/
